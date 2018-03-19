@@ -23,4 +23,11 @@
   - e.g. ^1.2.0 最新是2.1.0， 1.X.X最後一版是1.7.7，就會安裝1.7.7
 * `*` 裝最新版(架構大改)
 
+可以用yarn或npm來看套件最新版本
+
+```sh
+$ yarn info express version
+$ npm info express version 
+```
+
 
