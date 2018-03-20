@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-// const favicon = require('serve-favicon');
+const favicon = require("serve-favicon");
 const logger = require("morgan");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
@@ -43,5 +43,13 @@ app.use((err, req, res,next) => {
     res.render("error");
     //next();
 });
+
+// set mongoose connection
+const mongoose = require("mongoose");
+const mongoDB = "insert_your_database_url_here";
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+let db = mongoose.connection;
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 module.exports = app;
