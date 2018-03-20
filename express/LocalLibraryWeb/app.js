@@ -46,7 +46,7 @@ app.use((err, req, res,next) => {
 
 // set mongoose connection
 const mongoose = require("mongoose");
-const mongoDB = "insert_your_database_url_here";
+const mongoDB = "mongodb://dbname:passwork@ds012578.mlab.com:12578/local_librarywow";
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;
