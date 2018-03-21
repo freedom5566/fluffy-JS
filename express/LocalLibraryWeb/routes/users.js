@@ -12,4 +12,4 @@ router.get("/cool",(req,res)=>{
     res.send("You're so cool");
 });
 
-module.exports = router;
+module.exports = router; //讓他可以被appjs引入

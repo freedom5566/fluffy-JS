@@ -58,4 +58,4 @@ mongoose.Promise = global.Promise;
 let db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
-module.exports = app;
+module.exports = app; //讓它可以在別的地方引入

@@ -20,3 +20,9 @@ nodemon不錯用，開發的時候每次編輯完可以不用再下一次指令�
 但是`express --help`裏面有jade、pug到底是改名了還是怎樣，搞得我好亂阿！             
 本篇使用*ejs*
 
+### middlewares 中介層
+***
+express的中介層感覺做的事情有點多？
+Laravel的比較單純一點
+
+
