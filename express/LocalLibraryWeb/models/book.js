@@ -4,11 +4,16 @@ let Schema = mongoose.Schema;
 
 let BookSchema = new Schema(
     {
+        // 書的標題
         title: {type: String, required: true},
-        author: {type: Schema.ObjectId, ref: "Author", required: true},
+        // 書作者
+        author: {type: Schema.ObjectId, ref: "Author", required: true}, //引用Author模型
+        // 書概要
         summary: {type: String, required: true},
+        // 書ISBN
         isbn: {type: String, required: true},
-        genre: [{type: Schema.ObjectId, ref: "Genre"}]
+        // 書的類型
+        genre: [{type: Schema.ObjectId, ref: "Genre"}] //引用Genre模型
     }
 );
 

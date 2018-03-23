@@ -17,8 +17,8 @@ app.set("view engine", "ejs"); //使用哪種模版引擎
 
 // uncomment after placing your favicon in /public
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-//這串還看不懂......
-app.use(logger("dev"));
+
+app.use(logger("dev")); //
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -38,7 +38,7 @@ app.use((req, res, next) => {
 });
 
 // error handler
-// middlewares錯誤處理?
+// middlewares錯誤處理
 app.use((err, req, res,next) => {
     // set locals, only providing error in development
     res.locals.message = err.message;
@@ -50,9 +50,10 @@ app.use((err, req, res,next) => {
     next();
 });
 
-// set mongoose connection
+//set mongoose connection
 const mongoose = require("mongoose");
-const mongoDB = "mongodb://dbname:passwork@ds012578.mlab.com:12578/local_librarywow";
+//const sql=require("./config/sql");
+const mongoDB = `mongodb://dbname:passwork@ds012578.mlab.com:12578/local_librarywow`;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;

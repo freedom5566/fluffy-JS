@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
 let GenreSchema= new Schema({
+        // 書的類別名稱
         name: {type: String, required: true, max: 100,min:3},
 });
 
