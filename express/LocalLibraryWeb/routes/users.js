@@ -2,6 +2,9 @@ const express = require("express");
 
 const router = express.Router();
 
+
+
+
 /* GET users listing. */
 router.get("/", (req, res, next) => {
     res.render("users/users", {
@@ -13,7 +16,7 @@ router.get("/cool",(req,res)=>{
 });
 
 router.get("/test",(req,res)=>{
-    res.send(res);
+   res.send(`我好帥`);
 });
 
 module.exports = router; //讓他可以被appjs引入

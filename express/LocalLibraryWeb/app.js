@@ -10,6 +10,8 @@ const index = require("./routes/index");
 const users = require("./routes/users");
 const catalog = require('./routes/catalog');
 
+const sql=require("./config/sql.json");
+
 const app = express();
 
 // view engine setup
@@ -51,11 +53,11 @@ app.use((err, req, res,next) => {
     res.render("error");
     next();
 });
-
+    
 //set mongoose connection
 const mongoose = require("mongoose");
-//const sql=require("./config/sql");
-const mongoDB = "mongodb://dbname:passwork@ds012578.mlab.com:12578/local_librarywow";
+// const sql=require("./config/sql.json");
+const mongoDB = `mongodb://${sql.name}:${sql.passwork}@ds012578.mlab.com:12578/local_librarywow`;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;

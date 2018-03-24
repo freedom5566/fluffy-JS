@@ -7,7 +7,7 @@ const router = express.Router();
 //     res.render("index/index", { title: "Express" });
 // });
 
-router.get('/', function(req, res) {
-    res.redirect('/catalog');
+router.get("/", function(req, res) {
+    res.redirect("/catalog");
 });
 module.exports = router; //讓他可以被appjs引入
