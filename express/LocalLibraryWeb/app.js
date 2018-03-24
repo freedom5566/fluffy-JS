@@ -8,6 +8,7 @@ const bodyParser = require("body-parser");
 //引入路由
 const index = require("./routes/index");
 const users = require("./routes/users");
+const catalog = require('./routes/catalog');
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, "public"))); //載入靜態文件目
 //使用路由資料夾
 app.use("/", index);
 app.use("/users", users);
+app.use('/catalog', catalog);
 
 // catch 404 and forward to error handler
 // 404方法
@@ -53,7 +55,7 @@ app.use((err, req, res,next) => {
 //set mongoose connection
 const mongoose = require("mongoose");
 //const sql=require("./config/sql");
-const mongoDB = `mongodb://dbname:passwork@ds012578.mlab.com:12578/local_librarywow`;
+const mongoDB = "mongodb://dbname:passwork@ds012578.mlab.com:12578/local_librarywow";
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;

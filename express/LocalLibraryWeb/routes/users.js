@@ -12,4 +12,8 @@ router.get("/cool",(req,res)=>{
     res.send("You're so cool");
 });
 
+router.get("/test",(req,res)=>{
+    res.send(res);
+});
+
 module.exports = router; //讓他可以被appjs引入
