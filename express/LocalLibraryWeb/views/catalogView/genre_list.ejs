@@ -1,0 +1,20 @@
+<%- include("layout")%>
+    <h1>
+        <%= title %>
+    </h1>
+    <ul>
+    <% if(list_genres) { %>
+        <% for(let genres in list_genres){ %>
+            <li><a href="<%= list_genres[genres].url %>"> <%= list_genres[genres].name %></a></li>
+            
+        <% } %>
+    <% }else { %>
+        <li>There are no authors.</li>
+    <% } %>
+    </ul>
+</div>
+</div>
+</div>
+</body>
+</html>
+        
