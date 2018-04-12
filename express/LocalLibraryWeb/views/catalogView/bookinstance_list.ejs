@@ -1,0 +1,20 @@
+<%- include("layout")%>
+    <h1>
+        <%= title %>
+    </h1>
+    <ul>
+        <% if(bookinstance_list) { %>
+            <% for(let val in bookinstance_list){ %>
+                <li><%= val.url  %></li>
+                
+            <% } %>
+        <% }else { %>
+            <li>There are no book copies in this library.</li>
+        <% } %>
+        </ul>
+</div>
+</div>
+</div>
+</body>
+</html>
+        
