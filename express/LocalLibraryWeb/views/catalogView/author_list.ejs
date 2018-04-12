@@ -1,0 +1,20 @@
+<%- include("layout")%>
+    <h1>
+        <%= title %>
+    </h1>
+    <ul>
+    <% if(author_list) { %>
+        <% for(let author in author_list){ %>
+            <li><a href="<%= author_list[author].url %>"> <%= author_list[author].name %></a>(<%= author_list[author].date_of_birth %> - <%= author_list[author].date_of_death %>)</li>
+            
+        <% } %>
+    <% }else { %>
+        <li>There are no authors.</li>
+    <% } %>
+    </ul>
+</div>
+</div>
+</div>
+</body>
+</html>
+        
