@@ -60,6 +60,7 @@ const mongoose = require("mongoose");
 const mongoDB = `mongodb://${sql.name}:${sql.passwork}@ds012578.mlab.com:12578/local_librarywow`;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
+mongoose.set('debug', true);
 let db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 

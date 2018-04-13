@@ -5,13 +5,13 @@ let Book = require("../models/book");
 // Display list of all BookInstances.
 exports.bookinstance_list = function (req, res, next) {
 
-    let query = BookInstance.find();
-    query.exec(function (err, docs) {
-        if (err) res.send(err);
-        else res.send(docs);
+    // let query = BookInstance.find().all(function (arr) {
+    //     console.log(arr);
+        
+    // });
+    //let promise=query.exec();
+    //promise.addBack();
 
-
-    });
     // BookInstance.find({}, function (err, docs) {
     //     console.log(err);
     //     console.log(docs);
@@ -30,14 +30,14 @@ exports.bookinstance_list = function (req, res, next) {
     //         //res.render('catalogView/bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
     //         res.json(list_bookinstances);
     //     });
-    // BookInstance.find()
-    // .populate('book')
-    // .exec(function (err, list_bookinstances) {
-    //   if (err) { return next(err); }
-    //   // Successful, so render
-    //   //res.render('catalogView/bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
-    //     res.send(list_bookinstances);
-    // });
+    BookInstance.find()
+    .populate('book')
+    .exec(function (err, list_bookinstances) {
+      if (err) { return next(err); }
+      // Successful, so render
+      //res.render('catalogView/bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
+        res.send(list_bookinstances);
+    });
 };
 
 // Display detail page for a specific BookInstance.
