@@ -65,6 +65,7 @@ exports.book_detail = function (req, res, next) {
         }
         // Successful, so render.
         res.render('catalogView/book_detail', { title: 'Title', book: results.book, book_instances: results.book_instance });
+        //res.json({ title: 'Title', book: results.book, book_instances: results.book_instance });
     });
 
 };
