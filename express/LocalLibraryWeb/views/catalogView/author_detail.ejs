@@ -1,0 +1,28 @@
+<%- include("layout")%>
+    <h1>
+        Author:<%= author.name %>
+    </h1>
+    <p><%=  author.date_of_birth %> - <%= author.date_of_death %></p>
+    <div style="margin-left:20px;margin-top:20px"></div>
+    <h4>Books</h4>
+    <dl>
+        <% if(author_books) { %>
+            <% for(let book in author_books){ %>
+                <dt><a href="<%= author_books[book].url %>"> <%= author_books[book].title %></a></dt>
+                
+        
+    
+    <dd><%= author_books[book].summary %></dd>
+    <% } %>
+    
+</dl>
+<% }else { %>
+    <p>This author has no books.</p>
+<% } %>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+        
