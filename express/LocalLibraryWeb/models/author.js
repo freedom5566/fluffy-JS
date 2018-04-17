@@ -40,7 +40,7 @@ AuthorSchema
         if (this.date_of_death) {
             lifetime_string += moment(this.date_of_death).format('MMMM Do, YYYY');
         }
-        return lifetime_string
+        return lifetime_string;
     });
 
 AuthorSchema
