@@ -30,4 +30,21 @@ $ yarn info express version
 $ npm info express version 
 ```
 
+### typescript
+
+js的語法拿來寫後端真的讓我有點不習慣XD
+
+於是我想說試試看typescript
+
+還蠻有趣的
+
+    tsc --alwaysStrict -t ES2018 hello.ts
+嚴格模式，並使用es2018
+
+不過我想應該沒人想每次編譯都打一大串參數吧
+
+所以可以先`tsc --init`，會建立一個`tsconfig.json`設定可以先打好在裏面
+
+還有更多方便的[方法](https://www.typescriptlang.org/docs/home.html "typescript")
+
 
