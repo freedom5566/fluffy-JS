@@ -1,7 +1,23 @@
 <%- include("../layout")%>
     <h1>
-        <%= title %>
+        <%= title %>:<%= author.name %>
+
     </h1>
+    <p><%=author.lifespan%></p>
+    <% if(author_books.length){ %>
+        <p><strong>strong Delete the following books before attempting to delete this author.</strong></p>
+        <div class="margin-left:20px;margin-top:20px">
+            <h4>Books</h4>
+            <dl>
+                <% for(book of author_books){ %>
+                    <dt>
+                        <a href="<%= book.url %>"><%= book.title %></a>
+                    </dt>
+                    <dd><%= book.summary %></dd>
+                <% } %>
+            </dl>
+        </div>    
+    <% } %>
 
 </div>
 </div>
