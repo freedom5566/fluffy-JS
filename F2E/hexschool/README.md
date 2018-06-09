@@ -4,6 +4,6 @@
 # 偷學~UI設計師用的工具
 
 sketch - Zeplin
-sketch - measure
+* sketch - measure (六角所用)
 MarkMan
 PSD - Assistor PS
