@@ -1,6 +1,61 @@
-.hihead{
-    width: 100%;
+div.hihead{
+    /* width: 100%;
     background: #4A90E2;
     height:76px;
-    position:top;
+    position:top; */
+    position:fixed;/*位置固定*/
+
+    top:0;/*高度*/
+
+    left: 0%;/*左邊間隔*/
+
+    right: 0%;/*右邊間隔*/
+
+    width:100%;/*寬度*/
+
+    height: 76px;/*高度*/
+
+    z-index: 10000;/*負值*/
+
+    background-color:#4A90E2;
+    text-align: center;
+    
+
+   
+
+
 }
+ul {
+    list-style-type: none;
+    margin: 17px auto;
+    padding-left: 0px;
+    line-height: 1.4;
+    
+    
+    
+}
+
+li {
+    
+    display: inline;
+    text-align: center;
+}
+li a {
+    font-size: 24px;
+    
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* .my{
+    
+    
+}
+.com{
+    
+}
+.inp{
+    
+} */
